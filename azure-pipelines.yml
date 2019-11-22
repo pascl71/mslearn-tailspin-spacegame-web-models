@@ -40,5 +40,5 @@ steps:
   inputs:
     command: push
     publishVstsFeed: 'Tailspin.SpaceGame.Web.Models'
-    allowPackageConflicts: true
+    allowPackageConflicts: false
   condition: succeeded()
