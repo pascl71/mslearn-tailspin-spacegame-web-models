@@ -37,12 +37,11 @@ steps:
  
 - task: NuGetAuthenticate@0
   displayName: 'NuGet Authenticate'
-
+  
 - task: NuGetCommand@2
   displayName: 'Publish NuGet package'
   inputs:
     command: push
-    feedsToUse: 'config'
-    nugetConfigPath: '$(Build.WorkingDirectory)/NuGet.config'
+    publishVstsFeed: '0f465813-68bd-4598-8f84-6b65ccd50b01/Tailspin.SpaceGame.Web.Models'
     allowPackageConflicts: true
   condition: succeeded()
